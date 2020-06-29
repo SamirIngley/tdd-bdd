@@ -26,8 +26,31 @@ it("should say hello", function() {
 // This is called "Red-Green-Refactor"
 // ========================================================
 
+it("should return area", function() {
+  const area = utils.area(w, h)
+  expect(area).to.be.a("integer")
+  expect(area).to.be.gte(0)
+  expect(area).to.be.gte(w)
+  expect(area).to.be.gte(h)
+})
 
 
+it("should return perimeter", function() {
+  const perimeter = utils.perimeter(w, h)
+  expect(perimeter).to.be.a("integer")
+  expect(perimeter).to.be.gte(0)
+  expect(perimeter).to.be.gte(w)
+  expect(perimeter).to.be.gte(h)
+})
+
+
+it("should return circleArea", function() {
+  const circleArea = utils.area(w, h)
+  expect(circleArea).to.be.a("integer")
+  expect(circleArea).to.be.gte(0)
+  expect(circleArea).to.be.gte(w)
+  expect(circleArea).to.be.gte(h)
+})
 
 // ========================================================
 // Level 2 Challenges
