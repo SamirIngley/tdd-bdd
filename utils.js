@@ -44,6 +44,7 @@ const getShoppingCart = () => {
 
 const addItemToCart = (item) => {
   // should add item to shopping cart
+  shoppingCart.push(item)
 }
 
 const getNumItemsInCart = () => {

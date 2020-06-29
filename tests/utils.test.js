@@ -73,9 +73,17 @@ it("Should create a new (object) Item with name and price", function() {
   expect(item).to.have.property("quantity", 1)
 })
 
-it("Should return an array containing all items in cart")
+it("Should return an array containing all items in cart", function() {
+  const cart = utils.getShoppingCart()
+  expect(cart).to.be.a("array")
+})
 
-it("Should add a new item to the shopping cart")
+it("Should add a new item to the shopping cart", function() {
+  const item = utils.createItem("apple", 0.99)
+  utils.addItemToCart(item)
+  const cart = utils.getShoppingCart()
+  expect(cart.length).to.equal(1)
+})
 
 it("Should return the number of items in the cart")
 
